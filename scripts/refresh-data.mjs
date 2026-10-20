@@ -37,7 +37,9 @@ try {
 try {
   const query = `query($username:String!){
     matchedUser(username:$username){username profile{ranking} submitStatsGlobal{acSubmissionNum{difficulty count}} userCalendar{streak totalActiveDays submissionCalendar}}
-    userContestRanking(username:$username){rating attendedContestsCount globalRanking}
+    userContestRanking(username:$username){rating attendedContestsCount globalRanking topPercentage}
+    userContestRankingHistory(username:$username){attended rating}
+    allQuestionsCount{difficulty count}
   }`;
   const r = await fetch("https://leetcode.com/graphql", {
     method:"POST", headers:{"Content-Type":"application/json",Referer:"https://leetcode.com"},
@@ -49,12 +51,21 @@ try {
   if (result.errors || user?.username?.toLowerCase() !== leetcode.toLowerCase()) throw new Error("Invalid profile response");
   const buckets = user.submitStatsGlobal.acSubmissionNum;
   const pick = key => buckets.find(b => b.difficulty.toLowerCase() === key)?.count ?? 0;
+  const total = key => result.data.allQuestionsCount?.find(b => b.difficulty.toLowerCase() === key)?.count ?? null;
+  const contest = result.data.userContestRanking;
+  const ratings = (result.data.userContestRankingHistory ?? [])
+    .filter(entry => entry.attended && Number.isFinite(entry.rating))
+    .map(entry => entry.rating);
+  if (contest?.attendedContestsCount > 0 && Number.isFinite(contest.rating)) ratings.push(contest.rating);
   await save("leetcode-snapshot.json", {
     username:user.username, updatedAt:new Date().toISOString(),
     solved:{all:pick("all"),easy:pick("easy"),medium:pick("medium"),hard:pick("hard")},
+    totals:{easy:total("easy"),medium:total("medium"),hard:total("hard")},
     ranking:user.profile.ranking,
     contests:result.data.userContestRanking?.attendedContestsCount ?? 0,
     rating:result.data.userContestRanking?.rating ?? null,
+    peakRating:ratings.length ? Math.max(...ratings) : null,
+    topPercentage:contest?.attendedContestsCount > 0 ? contest.topPercentage ?? null : null,
     streak:user.userCalendar.streak,activeDays:user.userCalendar.totalActiveDays,
   });
   console.log("Updated LeetCode snapshot.");

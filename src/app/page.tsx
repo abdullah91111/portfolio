@@ -15,6 +15,7 @@ import { CleanHash } from "@/components/CleanHash";
 import { PublicGuestbook } from "@/components/PublicGuestbook";
 import { VisitorCounter } from "@/components/VisitorCounter";
 import { EmailActions } from "@/components/EmailActions";
+import { ProfileAvatar } from "@/components/ProfileAvatar";
 import { skillGroups } from "@/data/skillsData";
 import { getSocialProfiles } from "@/lib/stats/socials";
 import SoftPillButton from "@/components/pixel-perfect/soft-pill-button";
@@ -104,22 +105,7 @@ export default async function Home() {
         <div className="flex w-full items-center justify-between">
 
           <div className="flex items-center gap-4 sm:gap-5">
-            <div className="relative p-[3px] rounded-[6px] sm:rounded-[8px] border-[1.5px] border-black/30 dark:border-white/[0.15] shrink-0">
-              {/* The inner image */}
-              <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-[3px] sm:rounded-[5px] overflow-hidden bg-zinc-100 dark:bg-zinc-900">
-                <Image
-                  src="/abdullah-profile.jpg"
-                  alt="Abdullah Taufiq"
-                  width={240}
-                  height={240}
-                  quality={90}
-                  preload
-                  fetchPriority="high"
-                  sizes="(min-width: 640px) 120px, 96px"
-                  className="h-full w-full origin-center translate-y-1 scale-[1.1] object-cover opacity-90 grayscale contrast-100 mix-blend-multiply dark:mix-blend-normal"
-                />
-              </div>
-            </div>
+            <ProfileAvatar />
 
             <div className="flex flex-col justify-center pt-8">
               <h1 className="text-[20px] sm:text-[24px] font-bold text-zinc-800 dark:text-zinc-100 tracking-tight leading-none mb-0.5 [text-shadow:-1.5px_0_0_rgba(0,200,255,0.3),1.5px_0_0_rgba(255,80,0,0.3)] dark:[text-shadow:-1.5px_0_0_rgba(0,200,255,0.6),1.5px_0_0_rgba(255,80,0,0.6)]">

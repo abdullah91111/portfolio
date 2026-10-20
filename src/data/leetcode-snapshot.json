@@ -1,15 +1,22 @@
 {
   "username": "Abdullah91111",
-  "updatedAt": "2026-10-20T10:27:33.071Z",
+  "updatedAt": "2026-10-20T11:37:12.823Z",
   "solved": {
     "all": 61,
     "easy": 11,
     "medium": 37,
     "hard": 13
   },
-  "ranking": 2469721,
+  "totals": {
+    "easy": 972,
+    "medium": 2130,
+    "hard": 984
+  },
+  "ranking": 2443263,
   "contests": 0,
   "rating": null,
+  "peakRating": null,
+  "topPercentage": null,
   "streak": 8,
   "activeDays": 60
 }

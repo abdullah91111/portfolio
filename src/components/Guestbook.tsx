@@ -24,7 +24,7 @@ export function Guestbook() {
       term: String(portfolio.giscus.discussionNumber),
       "reactions-enabled": "1",
       "emit-metadata": "0",
-      "input-position": "top",
+      "input-position": "bottom",
       theme: resolvedTheme === "dark" ? "dark" : "light",
       lang: "en",
       loading: "lazy",

@@ -29,7 +29,8 @@ Open `http://localhost:3017/portfolio/`. `out/` is the deployment artifact; ther
 - Light/dark/system theme, command palette, animated banner, and pointer-reactive dot background.
 - Original generated landscape artwork compressed to a 76 KB WebP. Prompt direction: a quiet illustrated alpine lake, blue mountains, wildflowers, and a small traveler; no franchise characters. Decorative canvas animation pauses offscreen and in hidden tabs, with reduced-motion support.
 - GitHub contribution calendar and LeetCode statistics from the configured accounts. Snapshots include refresh dates. A failed upstream refresh keeps the previous snapshot; it never fills in made-up activity.
-- Copy-email button with a visible fallback, plus a `mailto:` link to the visitor's configured email app. No contact-form backend or email credentials.
+- Copy-email button with a selectable-address fallback. No contact-form backend or email credentials.
+- Illustrated portrait with a brief wave on hover, keyboard focus, or tap. A single 34 KB WebP sprite provides all four frames; reduced-motion users see a still greeting. Artwork source and prompt are documented in `docs/avatar-artwork.md`.
 - Shared **page-view** badge supplied by [Hits](https://github.com/silentsoft/hits). No account or API key. This is approximate hit counting, not verified unique people. Browser blocking/caching and service availability can affect totals. Localhost previews do not increment the live counter.
 - Live [giscus](https://giscus.app) guestbook backed by [Discussion #2](https://github.com/abdullah91111/portfolio/discussions/2). Comments are public immediately. Delete unwanted comments on GitHub; the widget reads the live discussion, with no separately cached copy in the portfolio.
 
