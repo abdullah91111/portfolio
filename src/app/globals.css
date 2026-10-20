@@ -196,9 +196,24 @@ body {
 }
 
 .blueprint-column { border-inline: 1px dotted color-mix(in srgb, currentColor 15%, transparent); }
+.avatar-sprite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  max-width: none;
+}
+.avatar-sprite-waving { animation: avatar-wave 1.2s steps(1, end) 2; }
+@keyframes avatar-wave {
+  0%, 100% { transform: translate(-50%, 0); }
+  25%, 75% { transform: translate(0, -50%); }
+  50% { transform: translate(-50%, -50%); }
+}
 .skip-link { position:fixed; top:8px; left:8px; transform:translateY(-200%); padding:8px 12px; background:white; color:black; z-index:1000; }
 .skip-link:focus { transform:none; }
 :focus-visible { outline:2px solid #38bdf8; outline-offset:4px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+  .avatar-sprite-waving { animation: none !important; transform: translate(-50%, 0); }
 }
