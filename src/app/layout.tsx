@@ -27,7 +27,10 @@ const doto = Doto({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  icons: { icon: asset("/favicon.svg") },
+  icons: {
+    icon: { url: asset("/portrait-icon.png"), type: "image/png", sizes: "64x64" },
+    apple: { url: asset("/portrait-apple-icon.png"), type: "image/png", sizes: "180x180" },
+  },
   title: portfolio.name,
   description: portfolio.description,
   openGraph: {
