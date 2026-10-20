@@ -18,11 +18,24 @@ export type ExperienceData = {
 
 export const experiences: ExperienceData[] = [
   {
+    "title": "Lorrysa",
+    "role": "Logistics platform development",
+    "dates": "Present",
+    "location": "",
+    "src": "/company-lorrysa.png",
+    "imageFit": "contain",
+    "type": "Current",
+    "description": "Working on Lorrysa’s logistics and delivery management platform.\nDeveloping connected web, backend, and driver app experiences for trip management, live tracking, and delivery workflows.",
+    "tech": ["Next.js", "TypeScript", "Go", "Flutter", "Google Maps"],
+    "links": [{ "label": "Lorrysa", "href": "https://lorrysa.com" }]
+  },
+  {
     "title": "BrainyAI",
     "role": "AI Engineer",
     "dates": "Feb 2025 — Jun 2026",
     "location": "Dubai, UAE",
-    "src": "/company-brainy.svg",
+    "src": "/company-brainyai.jpg",
+    "imageFit": "contain",
     "description": "Designed multi-agent workflows with tool calling, streaming, and shared memory.\nBuilt retrieval pipelines combining vector search and knowledge graphs.\nWorked with LangChain, Letta, Neo4j, FalkorDB, Qdrant, and n8n.\nAdded observability and evaluation to make production AI systems easier to operate.",
     "tech": [
       "Python",
@@ -38,7 +51,9 @@ export const experiences: ExperienceData[] = [
     "role": "AI Intern",
     "dates": "Aug — Sep 2024",
     "location": "Dubai, UAE",
-    "src": "/company-purecs.svg",
+    "src": "/company-purecs.jpg",
+    "imageFit": "contain",
+    "imageBleed": true,
     "description": "Explored retrieval-augmented generation for document-driven applications.\nResearched document chunking strategies to improve relevant context for LLMs.",
     "tech": [
       "Python",

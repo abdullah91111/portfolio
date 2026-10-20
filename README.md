@@ -1,7 +1,7 @@
 # Abdullah Taufiq — Portfolio
 
 A Next.js static portfolio for **https://abdullah91111.github.io/portfolio/**.
-Adapted from [Paras's MIT-licensed portfolio](https://github.com/Paras-ydv/portfolio), with Abdullah's own biography, projects, photograph, and profile data.
+Features Abdullah's experience, projects, and live profile data, with light and dark themes.
 
 ## Development and preview
 

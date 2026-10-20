@@ -144,7 +144,7 @@ export default async function Home() {
         </p>
 
         <ul className="text-[14px] sm:text-[15px] text-zinc-600 dark:text-zinc-300 leading-relaxed mt-4 pl-4 space-y-1">
-          <li>• Agentic AI, persistent memory, and knowledge graphs are what pull me in.</li>
+          <li>• Currently at <strong className="text-zinc-900 dark:text-white">Lorrysa</strong>, working on its logistics and delivery management platform.</li>
           <li>• Previously at <strong className="text-zinc-900 dark:text-white">BrainyAI</strong>, building the orchestration, retrieval, and observability around production AI.</li>
           <li>• I enjoy turning complex systems into useful, understandable products.</li>
         </ul>
@@ -455,7 +455,6 @@ export default async function Home() {
         </div>
 
         <VisitorCounter />
-        <p className="text-center text-[11px] text-zinc-500 pb-2">Design adapted from <a className="underline underline-offset-2" href="https://github.com/Paras-ydv/portfolio" target="_blank" rel="noopener noreferrer">Paras · MIT</a></p>
         {/* Fading Grid Filler */}
         <div className="flex-grow w-[calc(100%+32px)] -mx-4 h-[300px] relative mt-4">
           {/* Top full-width line */}
