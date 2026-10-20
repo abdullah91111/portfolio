@@ -19,8 +19,8 @@ export type ExperienceData = {
 export const experiences: ExperienceData[] = [
   {
     "title": "Lorrysa",
-    "role": "Logistics platform development",
-    "dates": "Present",
+    "role": "AI Engineer",
+    "dates": "Aug 2026 — Present",
     "location": "",
     "src": "/company-lorrysa.png",
     "imageFit": "contain",
@@ -67,7 +67,9 @@ export const experiences: ExperienceData[] = [
     "role": "Customer Service Team Lead",
     "dates": "Sep 2020 — Apr 2022",
     "location": "Dubai Airports, UAE",
-    "src": "/company-purehealth.svg",
+    "src": "/company-purecs.jpg",
+    "imageFit": "contain",
+    "imageBleed": true,
     "description": "Led a frontline customer service team at Dubai Airports.\nFocused on resolution quality, team performance, and dependable customer experiences.",
     "tech": [
       "Leadership",
