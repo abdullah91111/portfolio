@@ -58,3 +58,5 @@ To refresh snapshots locally, sign in to `gh` and run `npm run refresh-stats`. N
 - `.env.example`: optional base-path and canonical-URL overrides. Never put secrets in a `NEXT_PUBLIC_` variable.
 
 The stack retains Next.js, React, TypeScript, Tailwind, shadcn/Radix components, Framer Motion, and next-themes from the reference. Unused animation modules are not imported into the homepage. The shadcn stylesheet is vendored from version 4.22.0 to avoid shipping the CLI dependency; see `SHADCN-LICENSE.md`. The original template's MIT notice is preserved in `LICENSE`.
+
+By Abdullah
