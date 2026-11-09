@@ -3,7 +3,7 @@
 A Next.js static portfolio for **https://abdullah91111.github.io/portfolio/**.
 Features Abdullah's experience, projects, and live profile data, with light and dark themes.
 
-## Development and preview
+## Development and preview data
 
 Requires Node.js 22.
 
